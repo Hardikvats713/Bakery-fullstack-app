@@ -1,73 +1,80 @@
-# React + TypeScript + Vite
+# 🥐 Sweet Crumbs Bakery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sweet Crumbs Bakery is a modern, mobile-first web application designed to offer a seamless and visually appealing bakery ordering experience. Built with a premium, light-themed aesthetic, the app provides full frontend functionality from browsing artisanal baked goods to checking out.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **📱 Mobile-First Design**: Optimized for mobile devices with a smooth, app-like bottom navigation bar.
+- **🛍️ Complete Ordering Flow**: Browse categories, filter products, manage cart quantities, and apply promo codes (try `SWEET20`!).
+- **💳 Multi-Step Checkout**: A streamlined checkout process including delivery address entry and payment method selection, ending with a success confirmation.
+- **❤️ Wishlist Management**: Save your favorite pastries and cakes for later.
+- **📜 Order History**: View past orders and easily reorder your favorites.
+- **👤 User Profile**: Mock authentication flow (Login/Sign Up) and account management.
+- **🎨 Premium UI/UX**: Crafted with beautiful typography (Playfair Display & DM Sans), soft rose accents, and smooth Framer Motion animations.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React 18](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) (using the new CSS-first `@theme` architecture)
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand) (Modular stores for Cart, Wishlist, Auth, Orders, and Filters)
+- **Routing**: [React Router v6](https://reactrouter.com/) (with Lazy Loading & Suspense)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Follow these steps to run the project locally.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js (v18 or higher)
+- npm or yarn
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Hardikvats713/Bakery-fullstack-app.git
+   cd Bakery-fullstack-app
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser:**
+   Navigate to `http://localhost:5173` to see the app in action!
+
+## 📂 Project Structure
+
+```text
+src/
+├── assets/        # Images, logos, and static assets
+├── components/    # Reusable UI components (ProductCard, Layout, etc.)
+├── pages/         # Page components (Home, Menu, Cart, Checkout, Profile, Wishlist, etc.)
+├── data.ts        # Mock product data and categories
+├── store.ts       # Zustand state management stores
+├── index.css      # Global styles and Tailwind v4 theme configuration
+├── App.tsx        # Routing and lazy loading configuration
+└── main.tsx       # Application entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎨 Design System
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Primary Color**: Rose (`#E8877A`)
+- **Accent Color**: Deep Rose (`#C45E52`)
+- **Background**: Cream (`#FDF6EE`)
+- **Typography**: 
+  - Headings: *Playfair Display*
+  - Body: *DM Sans*
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📝 License
+
+This project is open-source and available under the [MIT License](LICENSE).
