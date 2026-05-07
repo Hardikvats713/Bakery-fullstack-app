@@ -96,7 +96,11 @@ export default function ProductCard({ product }: ProductCardProps) {
             transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
             style={{ position: 'fixed', zIndex: 9999, pointerEvents: 'none', fontSize: '2rem' }}
           >
-            {product.emoji}
+            {product.imageUrl ? (
+              <img src={product.imageUrl} alt={product.name} className="w-12 h-12 object-cover rounded-xl shadow-lg" />
+            ) : (
+              product.emoji
+            )}
           </motion.div>
         )}
       </AnimatePresence>

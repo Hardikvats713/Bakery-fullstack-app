@@ -18,9 +18,9 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen bg-gray-100 flex justify-center w-full">
-      <div className="w-full max-w-[480px] bg-bgLight min-h-screen shadow-2xl relative flex flex-col overflow-hidden">
+      <div className="w-full max-w-[480px] bg-bgLight min-h-screen shadow-2xl relative flex flex-col overflow-x-hidden">
         {/* Main Content Area */}
-        <div className="flex-1 overflow-y-auto pb-24 no-scrollbar relative">
+        <div className="flex-1 overflow-y-auto pb-24 no-scrollbar relative flex flex-col min-h-0">
           <AnimatePresence mode="wait">
             <motion.div
               key={location.pathname}
@@ -28,7 +28,7 @@ export default function Layout() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
-              className="h-full"
+              className="flex-1 flex flex-col min-h-full"
             >
               <Outlet />
             </motion.div>

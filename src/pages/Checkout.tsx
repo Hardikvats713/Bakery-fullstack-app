@@ -183,7 +183,11 @@ export default function Checkout() {
                 {items.map(item => (
                   <div key={item.product.id} className="flex justify-between items-center text-sm">
                     <div className="flex items-center space-x-3">
-                      <span className="text-lg">{item.product.emoji}</span>
+                      {item.product.imageUrl ? (
+                        <img src={item.product.imageUrl} alt={item.product.name} className="w-6 h-6 object-cover rounded" />
+                      ) : (
+                        <span className="text-lg">{item.product.emoji}</span>
+                      )}
                       <span className="text-textDark font-medium">{item.quantity} x {item.product.name}</span>
                     </div>
                     <span className="text-textDark font-bold">₹{item.product.price * item.quantity}</span>
