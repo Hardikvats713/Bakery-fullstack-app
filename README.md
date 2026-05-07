@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+# hsrdik_ott
+
+A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
+- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
+=======
 # 🥐 Sweet Crumbs Bakery
 
 Sweet Crumbs Bakery is a modern, mobile-first web application designed to offer a seamless and visually appealing bakery ordering experience. Built with a premium, light-themed aesthetic, the app provides full frontend functionality from browsing artisanal baked goods to checking out.
@@ -78,3 +97,4 @@ src/
 ## 📝 License
 
 This project is open-source and available under the [MIT License](LICENSE).
+>>>>>>> d80ca48b8dcfda6a22dfe3a816978620cd234ad6
